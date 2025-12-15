@@ -3,18 +3,6 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_delete - Deletes a binary tree
- * @tree: A pointer to the root of the binary tree
- */
-void binary_tree_delete(binary_tree_t *tree)
-{
-	if (tree == NULL)
-		return;
-
-	delete_nodes_recursively(tree);
-}
-
-/**
  * delete_nodes_recursively - Recursively deletes a binary tree
  * @node: The node to delete
  */
@@ -30,4 +18,16 @@ void delete_nodes_recursively(binary_tree_t *node)
 		delete_nodes_recursively(node->right);
 
 	free(node);
+}
+
+/**
+ * binary_tree_delete - Deletes a binary tree
+ * @tree: A pointer to the root of the binary tree
+ */
+void binary_tree_delete(binary_tree_t *tree)
+{
+	if (tree == NULL)
+		return;
+
+	delete_nodes_recursively(tree);
 }
