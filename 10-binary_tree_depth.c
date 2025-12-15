@@ -22,13 +22,11 @@ int _max(int a, int b)
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	size_t l;
-	size_t r;
-
 	if (tree == NULL)
 		return (0);
 
-	l = binary_tree_depth(tree->left);
-	r = binary_tree_depth(tree->right);
-	return ((size_t) _max((int) l, (int) r) + 1);
+	if (tree->parent == NULL)
+		return (0);
+
+	return (binary_tree_depth(tree->parent) + 1);
 }
