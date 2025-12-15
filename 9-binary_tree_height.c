@@ -3,13 +3,13 @@
 #include "binary_trees.h"
 
 /**
- * max - Returns the maximum of two numbers
+ * _max - Returns the maximum of two numbers
  * @a: The first number
  * @b: The second number
  *
  * Return: The larger number of a and b
  */
-int max(int a, int b)
+int _max(int a, int b)
 {
 	return (a >= b ? a : b);
 }
@@ -22,11 +22,16 @@ int max(int a, int b)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
+	size_t l;
+	size_t r;
+
 	if (tree == NULL)
 		return (0);
 
 	if (tree->left == NULL && tree->right == NULL)
 		return (0);
 
-	return ((size_t) max((int) binary_tree_height(tree->left), (int) binary_tree_height(tree->right)) + 1);
+	l = binary_tree_height(tree->left);
+	r = binary_tree_height(tree->right);
+	return ((size_t) _max((int) l, (int) r) + 1);
 }
