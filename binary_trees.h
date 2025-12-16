@@ -36,8 +36,10 @@ size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_leaves(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
+int binary_tree_is_full(const binary_tree_t *tree);
 
 void delete_nodes_recursively(binary_tree_t *node);
 int _max(int a, int b);
+int recursive_full_check(const binary_tree_t *node);
 
 #endif /* _BINARY_TREES_H_ */
