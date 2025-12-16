@@ -44,6 +44,6 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 void delete_nodes_recursively(binary_tree_t *node);
 int _max(int a, int b);
 int recursive_full_check(const binary_tree_t *node);
-int recursive_perfect_check(const binary_tree_t *node, size_t depth, size_t maxHeight);
+int recursive_perfect_check(const binary_tree_t *node, int depth, int height);
 
 #endif /* _BINARY_TREES_H_ */

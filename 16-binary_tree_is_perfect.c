@@ -40,7 +40,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
  * recursive_perfect_check - Recursively checks if a binary tree is perfect
  * @node: The parent node
  * @depth: The current depth of the node
- * @maxHeight: The maximum height of the tree
+ * @height: The maximum height of the tree
  *
  * Return: 1 if the tree is perfect, 0 otherwise
  */
@@ -54,7 +54,7 @@ int recursive_perfect_check(const binary_tree_t *node, int depth, int height)
 
 	if (node->left == NULL && node->right == NULL)
 	{
-		if (depth == maxHeight)
+		if (depth == height)
 			return (1);
 
 		return (0);
