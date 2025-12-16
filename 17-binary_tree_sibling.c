@@ -21,5 +21,5 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 	if (node->n < node->parent->n)
 		isLeft = 1;
 
-	return (isLeft == 1 ? node->parent->left : node->parent->right);
+	return (isLeft == 1 ? node->parent->right : node->parent->left);
 }
