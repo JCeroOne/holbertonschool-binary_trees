@@ -16,17 +16,17 @@ int recursive_full_check(const binary_tree_t *node)
 	if (node == NULL)
 		return (1);
 
-	if (tree->left == NULL && tree->right == NULL)
+	if (node->left == NULL && node->right == NULL)
 		return (1);
 
-	if (tree->left != NULL && tree->right == NULL)
+	if (node->left != NULL && node->right == NULL)
 		return (0);
 
-	if (tree->right != NULL && tree->left == NULL)
+	if (node->right != NULL && node->left == NULL)
 		return (0);
 
-	r = recursive_full_check(tree->right);
-	l = recursive_full_check(tree->left);
+	r = recursive_full_check(node->right);
+	l = recursive_full_check(node->left);
 
 	if (l == 0 || r == 0)
 		return (0);
