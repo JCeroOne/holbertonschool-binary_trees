@@ -3,6 +3,18 @@
 #include "binary_trees.h"
 
 /**
+ * _max - Returns the maximum of two numbers
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The larger number of a and b
+ */
+int _max(int a, int b)
+{
+	return (a >= b ? a : b);
+}
+
+/**
  * binary_tree_height - Calculates the height of a binary tree
  * @tree: A pointer to the root node of the tree
  *
